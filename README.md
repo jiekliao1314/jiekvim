@@ -1,4 +1,4 @@
-How to use
+1.How to use
 
 ./setvim.sh
 
