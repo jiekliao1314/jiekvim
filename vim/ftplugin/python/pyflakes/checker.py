@@ -219,7 +219,7 @@ class Checker(object):
         self._deferredAssignments = None
         del self.scopeStack[1:]
         self.popScope()
-        self.checkDeadScopes()
+        #self.checkDeadScopes()#liaojie disable the check
 
     def deferFunction(self, callable):
         """
@@ -278,7 +278,6 @@ class Checker(object):
                     if not importation.used and importation.name not in all:
                         self.report(messages.UnusedImport,
                                     importation.source.lineno, importation.name)
-
     def pushFunctionScope(self):
         self.scopeStack.append(FunctionScope())
 
@@ -655,7 +654,7 @@ class Checker(object):
                             and isinstance(binding, Assignment)):
                         self.report(messages.UnusedVariable,
                                     binding.source.lineno, name)
-            self.deferAssignment(checkUnusedAssignments)
+            #self.deferAssignment(checkUnusedAssignments)#liaojie disable the check
             self.popScope()
 
         self.deferFunction(runFunction)
