@@ -1,5 +1,5 @@
-1.How to use
-
-./setvim.sh
+1.How to install?
+  1) git clone the repository
+  2) run the install script install.sh 
 
 
