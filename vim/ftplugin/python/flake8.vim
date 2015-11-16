@@ -47,8 +47,7 @@ endif
 let g:PyFlakeDirectory = expand('<sfile>:p:h')
 
 if !exists('g:PyFlakeCheckers')
-    "let g:PyFlakeCheckers = 'pep8,mccabe,pyflakes'
-    let g:PyFlakeCheckers = 'pyflakes'"liaojie
+    let g:PyFlakeCheckers = 'pep8,mccabe,pyflakes'
 endif
 if !exists('g:PyFlakeDefaultComplexity')
     let g:PyFlakeDefaultComplexity=10

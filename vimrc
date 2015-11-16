@@ -47,19 +47,45 @@ func FormartSrc()
 endfunc
 
 "#set NERDTree 
+function! NERDTreeQuit()
+  redir => buffersoutput
+  silent buffers
+  redir END
+"                     1BufNo  2Mods.     3File           4LineNo
+  let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
+  let windowfound = 0
+
+  for bline in split(buffersoutput, "\n")
+    let m = matchlist(bline, pattern)
+
+    if (len(m) > 0)
+      if (m[2] =~ '..a..')
+        let windowfound = 1
+      endif
+    endif
+  endfor
+
+  if (!windowfound)
+    quitall
+  endif
+endfunction
+autocmd WinEnter * call NERDTreeQuit() "auto quit
+autocmd VimEnter * NERDTree "auto open
+autocmd VimEnter * wincmd p
 nmap <F7> :NERDTreeToggle<CR>
 let NERDTreeWinSize=32
 let NERDTreeWinPos="left"
 let NERDTreeAutoDeleteBuffer=1
 " let NERDTreeShowHidden=1
 " let NERDTreeMinimalUI=1
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "NERDTree auto close
 let NERDTreeIgnore=['\.pyc']
 
 "#set tarbar
-"let tagbar_left=1 
+autocmd VimEnter * nested :TagbarOpen "auto open
 nmap <F8> :TagbarToggle<CR>
+"let tagbar_left=1 
 let tagbar_width=32 
 let g:tagbar_compact=1
 
-
+"set minibufexplorer
+let g:miniBufExplBuffersNeeded = 0
