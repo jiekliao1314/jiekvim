@@ -69,7 +69,8 @@ function! NERDTreeQuit()
     quitall
   endif
 endfunction
-autocmd WinEnter * call NERDTreeQuit() "auto quit
+"autocmd WinEnter * call NERDTreeQuit() "auto quit
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd VimEnter * NERDTree "auto open
 autocmd VimEnter * wincmd p
 nmap <F7> :NERDTreeToggle<CR>
