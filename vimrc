@@ -1,13 +1,12 @@
 "#pathogen 
 execute pathogen#infect()
 
-"set mouse=a
 "#file type
 filetype on
 filetype plugin on
 filetype indent on
 
-"#Tabstops are 4 spaces
+"#Tabstops 
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -17,6 +16,7 @@ set autoindent
 "#set highlight
 syntax on
 set hlsearch
+set cursorline
 
 "#show line number
 set nu
@@ -26,7 +26,15 @@ set background=dark
 colorscheme solarized
 "colorscheme molokai
 "colorscheme phd
-"colorscheme eclipse
+
+"set auto-complete bracket
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap { {}<ESC>i
+inoremap < <><ESC>i
+
+"simple auto-comment a line
+nnoremap # ^i#<Esc><CR>colorscheme eclipse
 
 "set powerline(statusline)
 let g:Powerline_colorscheme='solarized256'
@@ -90,3 +98,5 @@ let g:tagbar_compact=1
 
 "set minibufexplorer
 let g:miniBufExplBuffersNeeded = 0
+
+
