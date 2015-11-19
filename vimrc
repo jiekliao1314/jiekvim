@@ -26,15 +26,27 @@ set background=dark
 colorscheme solarized
 "colorscheme molokai
 "colorscheme phd
+"colorscheme eclipse
 
-"set auto-complete bracket
+"set auto-complete bracket and symbol
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
 inoremap { {}<ESC>i
 inoremap < <><ESC>i
+inoremap ' ''<ESC>i
+inoremap " ""<ESC>i
 
 "simple auto-comment a line
-nnoremap # ^i#<Esc><CR>colorscheme eclipse
+nnoremap # ^i#<Esc><CR>
+
+"auto-complete todo,fixme,note
+nnoremap <leader>t O#TODO:
+nnoremap <leader>f O#FIXME:
+nnoremap <leader>n O#NOTE:
+
+"-----------------------
+"plugins
+"-----------------------
 
 "set powerline(statusline)
 let g:Powerline_colorscheme='solarized256'
