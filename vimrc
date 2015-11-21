@@ -36,10 +36,11 @@ inoremap < <><ESC>i
 inoremap ' ''<ESC>i
 inoremap " ""<ESC>i
 
-"simple auto-comment a line
-nnoremap # ^i#<Esc><CR>
+"simple auto-comment for python 
+nnoremap <leader>3 ^i#<Esc><CR>
+nnoremap <leader>' O"""<Esc><CR>
 
-"auto-complete todo,fixme,note
+"auto-comment todo,fixme,note
 nnoremap <leader>t O#TODO:
 nnoremap <leader>f O#FIXME:
 nnoremap <leader>n O#NOTE:
