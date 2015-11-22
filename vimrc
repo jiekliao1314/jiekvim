@@ -103,11 +103,11 @@ let NERDTreeAutoDeleteBuffer=1
 let NERDTreeIgnore=['\.pyc']
 
 "#set tarbar
-autocmd VimEnter * nested :TagbarOpen "auto open
+autocmd FileType c,cpp,python nested :TagbarOpen
 nmap <F8> :TagbarToggle<CR>
-"let tagbar_left=1 
 let tagbar_width=32 
 let g:tagbar_compact=1
+let g:tagbar_sort = 0
 
 "set minibufexplorer
 let g:miniBufExplBuffersNeeded = 0
