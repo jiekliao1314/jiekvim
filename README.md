@@ -1,18 +1,18 @@
-Intro:
+#Intro:
   This vim is for python.
   TODO
 
-How to Use:
+#How to Use:
 1.set the environment
     1)vim version
     2)ctags for tagbar
     3)pep8 for flake8
     4)autopep8
-1.install
+2.install
     1) git clone repository
     2) run the install script named install.sh
 
-What plugins:
+#What plugins:
 1.powerline
 2.nerdtree
   I make the nerdtree auto-open and auto-quit,but auto-quit is related to vim version .refer to vimrc file
@@ -24,5 +24,5 @@ What plugins:
 6.autopep8
 7.vim-log-syntax
   
-Problems:
+#Problems:
 
