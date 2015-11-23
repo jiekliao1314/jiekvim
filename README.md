@@ -21,5 +21,5 @@
 5. `autopep8`
 6. `vim-log-syntax` a plugin for highlighting log key words
 
-##Problems
+##Troubleshooting
 TODO
