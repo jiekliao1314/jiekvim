@@ -1,6 +1,5 @@
 #jackvim
-`jackvim` is vim is for python.<br>
-  TODO
+`jackvim` is a kind of vim configuration for python developer.
 
 ##Installation
 ###Requirements
@@ -14,13 +13,13 @@
 2. run `install.sh`
 
 ##Features
-1. `powerline`
-2. `nerdtree` I make the nerdtree autoopen and autoquit,but autoquit is related to vim version .Refer to `vimrc`.
-3. `tagbar`
-4. `minibufexplorer`
-5. `flake8` I disable some checkers and check scopes.Refer to `vim/ftplugin/python/flake8.vim` and `vim/ftplugin/python/pyflakes/checker.py`.(search the key word `liaojie` ,you can see the changes)
-6. `autopep8`
-7. `vim-log-syntax` a plugin for highlighting log key words
+1. `nerdtree` I make the nerdtree autoopen and autoquit,but autoquit is related to vim version .Refer to `vimrc`.
+2. `tagbar`
+3. `minibufexplorer`
+4. `powerline`
+4. `flake8` I disable some checkers and check scopes.Refer to `vim/ftplugin/python/flake8.vim` and `vim/ftplugin/python/pyflakes/checker.py`.(search the key word `liaojie` ,you can see the changes)
+5. `autopep8`
+6. `vim-log-syntax` a plugin for highlighting log key words
 
 ##Problems
-TOOD
+TODO
