@@ -100,7 +100,7 @@ let NERDTreeWinPos="left"
 let NERDTreeAutoDeleteBuffer=1
 " let NERDTreeShowHidden=1
 " let NERDTreeMinimalUI=1
-let NERDTreeIgnore=['\.pyc']
+let NERDTreeIgnore=['\.pyc', '\.pyo']
 
 "#set tarbar
 autocmd FileType c,cpp,python nested :TagbarOpen
