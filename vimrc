@@ -15,8 +15,8 @@ set autoindent
 
 "#set highlight
 syntax on
-set hlsearch
 set cursorline
+set hlsearch
 
 "#show line number
 set nu
@@ -28,7 +28,7 @@ colorscheme solarized
 "colorscheme phd
 "colorscheme eclipse
 
-"set auto-complete bracket and symbol
+"set bracket and symbol auto-complete
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
 inoremap { {}<ESC>i
@@ -40,7 +40,7 @@ inoremap " ""<ESC>i
 nnoremap <leader>3 ^i#<Esc><CR>
 nnoremap <leader>' O"""<Esc><CR>
 
-"auto-comment todo,fixme,note
+"todo,fixme,note auto-comment
 nnoremap <leader>t O#TODO:
 nnoremap <leader>f O#FIXME:
 nnoremap <leader>n O#NOTE:
@@ -48,24 +48,6 @@ nnoremap <leader>n O#NOTE:
 "-----------------------
 "plugins
 "-----------------------
-
-"set powerline(statusline)
-let g:Powerline_colorscheme='solarized256'
-set nocompatible   " Disable vi-compatibility
-set laststatus=2   " Always show the statusline
-set encoding=utf-8 " Necessary to show Unicode glyphs
-let g:Powerline_stl_path_style = 'full'
-
-
-"#set autopep8
-map <F6> :call FormartSrc()<CR>
-func FormartSrc()
-    exec "w"
-    if &filetype == 'py'||&filetype == 'python'
-        exec "r !autopep8 -i --aggressive %"
-    endif
-    exec "e! %"
-endfunc
 
 "#set NERDTree 
 function! NERDTreeQuit()
@@ -90,19 +72,17 @@ function! NERDTreeQuit()
     quitall
   endif
 endfunction
-"autocmd WinEnter * call NERDTreeQuit() "auto quit for vim7.3
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "auto quit for vim7.4
+"autocmd WinEnter * call NERDTreeQuit() "auto quit for vim73
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "auto quit for vim74
 autocmd VimEnter * NERDTree "auto open
 autocmd VimEnter * wincmd p
 nmap <F7> :NERDTreeToggle<CR>
 let NERDTreeWinSize=32
 let NERDTreeWinPos="left"
 let NERDTreeAutoDeleteBuffer=1
-" let NERDTreeShowHidden=1
-" let NERDTreeMinimalUI=1
 let NERDTreeIgnore=['\.pyc', '\.pyo']
 
-"#set tarbar
+"#set tagbar
 autocmd FileType c,cpp,python nested :TagbarOpen
 nmap <F8> :TagbarToggle<CR>
 let tagbar_width=32 
@@ -112,4 +92,19 @@ let g:tagbar_sort = 0
 "set minibufexplorer
 let g:miniBufExplBuffersNeeded = 0
 
+"set powerline(statusline)
+let g:Powerline_colorscheme='solarized256'
+set nocompatible   " Disable vi-compatibility
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
+let g:Powerline_stl_path_style = 'full'
 
+"#set autopep8
+map <F6> :call FormartSrc()<CR>
+func FormartSrc()
+    exec "w"
+    if &filetype == 'py'||&filetype == 'python'
+        exec "r !autopep8 -i --aggressive %"
+    endif
+    exec "e! %"
+endfunc
