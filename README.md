@@ -7,7 +7,7 @@
 1. vim version.The settings is mostly for vim7.3 and vim7.4.
 2. `ctags` for tagbar.
 3. `pep8` for flake8
-4.`autopep8`
+4. `autopep8`<br>
 ###2.install
     1) git clone repository. `git clone https://github.com/jiekliao1314/jackvim.git`
     2) run the install script named install.sh
