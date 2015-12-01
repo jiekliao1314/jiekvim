@@ -9,7 +9,7 @@
 4. `autopep8`.
 
 ###install
-1. git clone repository. `git clone https://github.com/jiekliao1314/jackvim.git`
+1. git clone repository. `git clone https://github.com/jiekliao1314/jiekvim.git`
 2. run `install.sh`
 
 ##Features
