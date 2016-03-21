@@ -54,27 +54,29 @@ function! NERDTreeQuit()
   redir => buffersoutput
   silent buffers
   redir END
-"                     1BufNo  2Mods.     3File           4LineNo
   let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
   let windowfound = 0
-
   for bline in split(buffersoutput, "\n")
     let m = matchlist(bline, pattern)
-
     if (len(m) > 0)
       if (m[2] =~ '..a..')
         let windowfound = 1
       endif
     endif
   endfor
-
   if (!windowfound)
     quitall
   endif
 endfunction
-"autocmd WinEnter * call NERDTreeQuit() "auto quit for vim73
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "auto quit for vim74
-autocmd VimEnter * NERDTree "auto open
+
+"auto-quit for vim7.3
+"autocmd WinEnter * call NERDTreeQuit() 
+
+"auto-quit for vim7.4
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif 
+
+"auto-open
+autocmd VimEnter * NERDTree 
 autocmd VimEnter * wincmd p
 nmap <F7> :NERDTreeToggle<CR>
 let NERDTreeWinSize=32
