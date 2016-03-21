@@ -48,7 +48,7 @@ let g:PyFlakeDirectory = expand('<sfile>:p:h')
 
 if !exists('g:PyFlakeCheckers')
     "let g:PyFlakeCheckers = 'pep8,mccabe,pyflakes'
-    let g:PyFlakeCheckers = 'pyflakes' "liaojie to disable pep8 and mccabe checkers
+    let g:PyFlakeCheckers = 'pyflakes' "FIXME(jiekliao):disabled pep8 and mccabe checkers
 endif
 if !exists('g:PyFlakeDefaultComplexity')
     let g:PyFlakeDefaultComplexity=10

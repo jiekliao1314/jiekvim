@@ -219,7 +219,8 @@ class Checker(object):
         self._deferredAssignments = None
         del self.scopeStack[1:]
         self.popScope()
-        #self.checkDeadScopes()#liaojie disable the check
+        #FIXME(jiekliao): disabled this kind of checking
+        #self.checkDeadScopes()
 
     def deferFunction(self, callable):
         """
@@ -654,7 +655,8 @@ class Checker(object):
                             and isinstance(binding, Assignment)):
                         self.report(messages.UnusedVariable,
                                     binding.source.lineno, name)
-            #self.deferAssignment(checkUnusedAssignments)#liaojie disable the check
+            #FIXME(jiekliao): disabled this kind of checking
+            #self.deferAssignment(checkUnusedAssignments) 
             self.popScope()
 
         self.deferFunction(runFunction)
