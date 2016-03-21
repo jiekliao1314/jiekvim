@@ -18,11 +18,10 @@
 2. `tagbar`
 3. `minibufexplorer`
 4. `powerline`
-4. `flake8` 
-    I disabled some checkers and check scopes. Refer to `vim/ftplugin/python/flake8.vim` and `vim/ftplugin/python/pyflakes/checker.py`.  
-    You can search the key word `jiekliao` to see the changes.
+4. `flake8`  
+    I disabled some checkers and check scopes. Refer to `vim/ftplugin/python/flake8.vim` and `vim/ftplugin/python/pyflakes/checker.py`. You can search the key word `jiekliao` to see the changes.
 5. `autopep8`
-6. `vim-log-syntax` 
+6. `vim-log-syntax`  
     A plugin for highlighting log key words!
 
 ##Troubleshooting
