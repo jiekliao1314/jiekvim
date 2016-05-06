@@ -45,6 +45,9 @@ nnoremap <leader>t O#TODO:
 nnoremap <leader>f O#FIXME:
 nnoremap <leader>n O#NOTE:
 
+"set cursor to main middle window
+nmap <leader>w :3 wincmd w<CR>
+
 "-----------------------
 "plugins
 "-----------------------
