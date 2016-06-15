@@ -1,5 +1,5 @@
 #jiekvim
-`jiekvim` is a kind of vim configuration for python developer.
+`jiekvim` is a kind of vim configuration for `python` developer.
 
 ##Installation
 ###1.Requirements
