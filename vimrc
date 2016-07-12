@@ -73,10 +73,10 @@ function! NERDTreeQuit()
 endfunction
 
 "auto-quit for vim7.3
-"autocmd WinEnter * call NERDTreeQuit() 
+autocmd WinEnter * call NERDTreeQuit() 
 
 "auto-quit for vim7.4
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif 
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif 
 
 "auto-open
 autocmd VimEnter * NERDTree 
