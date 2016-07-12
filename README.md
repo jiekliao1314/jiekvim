@@ -3,7 +3,7 @@
 
 ##Installation
 ###1.Requirements
-1. vim >= 7.3.
+1. vim >= 7.3(default).
 2. `ctags` for tagbar.
 3. `pep8` for flake8.
 4. `autopep8`.
