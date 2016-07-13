@@ -48,6 +48,9 @@ nnoremap <leader>n O#NOTE:
 "set cursor to main middle window
 nmap <leader>w :3 wincmd w<CR>
 
+"set paste
+:set pastetoggle=<F9>
+
 "-----------------------
 "plugins
 "-----------------------
