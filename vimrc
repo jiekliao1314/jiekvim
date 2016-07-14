@@ -32,7 +32,6 @@ colorscheme solarized
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
 inoremap { {}<ESC>i
-inoremap < <><ESC>i
 inoremap ' ''<ESC>i
 inoremap " ""<ESC>i
 
