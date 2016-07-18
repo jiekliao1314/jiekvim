@@ -12,5 +12,4 @@ if [ $? -eq 0 ];then
     echo "Vim is set up successfully!"
 else
     echo "Error!"
-
-
+fi
