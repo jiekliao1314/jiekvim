@@ -18,7 +18,8 @@ git clone https://github.com/jiekliao1314/jiekvim.git
 ./install.sh
 ```
 ##Features
-1. **nerdtree**</br>
+1. **nerdtree**
+
 I make the nerdtree auto-open and auto-quit, but auto-quit is related to vim version(For more details, please see the file **vimrc**).
 2. **tagbar**
 3. **minibufexplorer**
