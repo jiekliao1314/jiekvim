@@ -2,12 +2,18 @@
 
 echo "Start setting up vim..." 
 
-rm -rf ~/.vim.bak ~/.vimrc.bak >/dev/null
+install_vimrc="$HOME/.vimrc"
+install_vim="$HOME/.vim"
 
-mv ~/.vim ~/.vim.bak >/dev/null
-mv ~/.vimrc ~/.vimrc.bak >/dev/null
+if [ -f $install_vimrc ];then
+    mv $install_vimrc "${install_vimrc}.bak" >/dev/null
+fi
 
-cp vimrc ~/.vimrc && cp -r vim ~/.vim 
+if [ -d $install_vim ];then
+    mv $install_vim  "${install_vim}.bak" >/dev/null
+fi
+
+cp vimrc $install_vimrc && cp -r vim $install_vim
 
 if [ $? -eq 0 ];then
     echo "Vim is set up successfully!"
