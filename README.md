@@ -19,7 +19,6 @@ git clone https://github.com/jiekliao1314/jiekvim.git
 ```
 ##Features
 1. **nerdtree**
-
 I make the nerdtree auto-open and auto-quit, but auto-quit is related to vim version(For more details, please see the file **vimrc**).
 2. **tagbar**
 3. **minibufexplorer**
@@ -30,10 +29,10 @@ I make the nerdtree auto-open and auto-quit, but auto-quit is related to vim ver
 
     (For more details, please see `vim/ftplugin/python/flake8.vim` and `vim/ftplugin/python/pyflakes/checker.py`. You can search the key word **jiekliao** to locate the changes)
 6. **autopep8**
-7.  **vim-log-syntax**
+7. **vim-log-syntax**
 
   A plugin for highlighting log key words!
-
+8. **xml.vim**
 ##Troubleshooting
 TODO
 
