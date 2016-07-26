@@ -18,9 +18,9 @@ cp vimrc $install_vimrc && cp -r vim $install_vim
 if [ $? -eq 0 ];then
     echo "Vim is set up successfully!"
     echo "--------------------------"
-    echo "Make sure the following packages installed:"
+    echo "Make sure dependencies were installed:"
     echo "*ctags"
     echo "--------------------------"
 else
-    echo "Failed in setting up vim!"
+    echo "Failed to set up vim!"
 fi

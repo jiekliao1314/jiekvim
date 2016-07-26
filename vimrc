@@ -13,12 +13,12 @@ set softtabstop=4
 set expandtab
 set autoindent
 
-"#set highlight
+"#highlight
 syntax on
 set cursorline
 set hlsearch
 
-"#show line number
+"#line number
 set nu
 
 "#color scheme
@@ -28,33 +28,38 @@ colorscheme solarized
 "colorscheme phd
 "colorscheme eclipse
 
-"set bracket and symbol auto-complete
+"---------------
+"auto complete
+"---------------
+"brackets and symbols 
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
 inoremap { {}<ESC>i
 inoremap ' ''<ESC>i
 inoremap " ""<ESC>i
 
-"simple auto-comment for python 
+"---------------
+"shortcut
+"---------------
+"comment python 
 nnoremap <leader>3 ^i#<Esc><CR>
 nnoremap <leader>' O"""<Esc><CR>
 
-"todo,fixme,note auto-comment
+"TODO,FIXME,NOTE 
 nnoremap <leader>t O#TODO:
 nnoremap <leader>f O#FIXME:
 nnoremap <leader>n O#NOTE:
 
-"set cursor to main middle window
+"cursor back to main(middle) window
 nmap <leader>w :3 wincmd w<CR>
 
-"set paste
+"paste mode 
 :set pastetoggle=<F9>
 
-"-----------------------
-"plugins
-"-----------------------
 
-"#set NERDTree 
+"---------------
+"NERDTree
+"---------------
 function! NERDTreeQuit()
   redir => buffersoutput
   silent buffers
@@ -73,40 +78,56 @@ function! NERDTreeQuit()
     quitall
   endif
 endfunction
-
 "auto-quit for vim7.3
 autocmd WinEnter * call NERDTreeQuit() 
-
 "auto-quit for vim7.4
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif 
 
-"auto-open
+"auto open
 autocmd VimEnter * NERDTree 
 autocmd VimEnter * wincmd p
+
+"open shortcut
 nmap <F7> :NERDTreeToggle<CR>
+
+"others
 let NERDTreeWinSize=32
 let NERDTreeWinPos="left"
 let NERDTreeAutoDeleteBuffer=1
 let NERDTreeIgnore=['\.pyc', '\.pyo']
 
-"#set tagbar
+"---------------
+"tagbar
+"---------------
+"auto open
 autocmd FileType c,cpp,python nested :TagbarOpen
+
+"open shortcut
 nmap <F8> :TagbarToggle<CR>
+
+"others
 let tagbar_width=32 
 let g:tagbar_compact=1
 let g:tagbar_sort = 0
 
-"set minibufexplorer
+"---------------
+"minibufexplorer
+"---------------
 let g:miniBufExplBuffersNeeded = 0
 
-"set powerline(statusline)
+"---------------
+"powerline(statusline)
+"---------------
 let g:Powerline_colorscheme='solarized256'
 set nocompatible   " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 let g:Powerline_stl_path_style = 'full'
 
-"#set autopep8
+"---------------
+"autopep8
+"---------------
+"open shortcut
 map <F6> :call FormartSrc()<CR>
 func FormartSrc()
     exec "w"
