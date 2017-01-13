@@ -43,6 +43,7 @@ inoremap " ""<ESC>i
 "---------------
 "comment python 
 nnoremap <leader>3 ^i#<Esc><CR>
+vnoremap <leader>3 ^I#<Esc><CR>
 nnoremap <leader>' O"""<Esc><CR>
 
 "TODO,FIXME,NOTE 
